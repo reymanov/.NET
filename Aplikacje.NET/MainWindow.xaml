@@ -5,162 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aplikacje.NET"
         mc:Ignorable="d"
-        Title="Zad_1" Height="600" Width="500">
+        Title="Zad_1" Height="600" Width="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <ScrollViewer
-            Margin="10"
-            Grid.ColumnSpan="3"
-            Grid.Row="0"
+        <Border Background="LightGray" Grid.ColumnSpan="4" Margin="0,0,0,0" Grid.RowSpan="1"/>
+
+        <Button x:Name="redButton" Grid.Column="0" Content="Czerwony" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="35" Margin="4" BorderThickness="4" BorderBrush="Red" Click="redButton_Click"/>
+        <Button x:Name="blueButton" Grid.Column="1" Content="Niebieski" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="35" Margin="4" BorderThickness="4" BorderBrush="Blue" Click="blueButton_Click"/>
+        <Button x:Name="greenButton" Grid.Column="2" Content="Zielony" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="35" Margin="4" BorderThickness="4" BorderBrush="Green" Click="greenButton_Click"/>
+        <Button x:Name="yellowButton" Grid.Column="3" Content="Żółty" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="35" Margin="4" BorderThickness="4" BorderBrush="Yellow" Click="yellowButton_Click"/>
+        
+        <Border
+           x:Name="box1"
             Grid.Column="0"
-            Grid.RowSpan="1"
-            HorizontalScrollBarVisibility="Auto"
-            VerticalScrollBarVisibility="Disabled"
-            >
-            <StackPanel
-                Background="#fff"
-                Orientation="Horizontal"
-                FlowDirection="LeftToRight"
-                >
-                <Border
-                MinHeight="50"
-                MinWidth="100"
-                Margin="5"
-                BorderThickness="5"
-                BorderBrush="#00F"
-                Background="#99F"
-                />
-                <Border
-                MinHeight="50"
-                MinWidth="100"
-                Margin="5"
-                BorderThickness="5"
-                BorderBrush="#FF77"
-                Background="#FF10"
-                />
-                <Border
-                MinHeight="50"
-                MinWidth="100"
-                Margin="5"
-                BorderThickness="5"
-                BorderBrush="#00F"
-                Background="#99F"
-                />
-                <Border
-                MinHeight="50"
-                MinWidth="100"
-                Margin="5"
-                BorderThickness="5"
-                BorderBrush="#FF77"
-                Background="#FF10"
-                />
-                <Border
-                MinHeight="50"
-                MinWidth="100"
-                Margin="5"
-                BorderThickness="5"
-                BorderBrush="#00F"
-                Background="#99F"
-                />
-                <Border
-                MinHeight="50"
-                MinWidth="100"
-                Margin="5"
-                BorderThickness="5"
-                BorderBrush="#FF77"
-                Background="#FF10"
-                />
-                <Border
-                MinHeight="50"
-                MinWidth="100"
-                Margin="5"
-                BorderThickness="5"
-                BorderBrush="#00F"
-                Background="#99F"
-                />
-            </StackPanel>
-        </ScrollViewer>
-        <ScrollViewer
-            Margin="10"
-            Grid.ColumnSpan="1"
             Grid.Row="1"
-            Grid.RowSpan="4"
-            HorizontalScrollBarVisibility="Disabled"
-            VerticalScrollBarVisibility="Auto"
-            >
-            <StackPanel
-                Background="#fff"
-                Orientation="Vertical"
-                FlowDirection="LeftToRight"
-                >
-                <Border
-                Height="100"
+                MinHeight="50"
                 MinWidth="50"
                 Margin="5"
                 BorderThickness="5"
-                BorderBrush="#00F"
-                Background="#99F"
+                BorderBrush="Black"
+                Background="DarkGray"
                 />
-                <Border
-                MinHeight="100"
-                MinWidth="100"
+        <Border
+            x:Name="box2"
+            Grid.Column="0"
+            Grid.Row="2"
+                MinHeight="50"
+                MinWidth="50"
                 Margin="5"
                 BorderThickness="5"
-                BorderBrush="#FF77"
-                Background="#FF10"
+                BorderBrush="Black"
+                Background="DarkGray"
                 />
-                <Border
-                MinHeight="100"
-                MinWidth="100"
+        <Border
+            x:Name="box3"
+            Grid.Column="0"
+            Grid.Row="3"
+                MinHeight="50"
+                MinWidth="50"
                 Margin="5"
                 BorderThickness="5"
-                BorderBrush="#00F"
-                Background="#99F"
+                BorderBrush="Black"
+                Background="DarkGray"
                 />
-                <Border
-                MinHeight="100"
-                MinWidth="100"
-                Margin="5"
-                BorderThickness="5"
-                BorderBrush="#FF77"
-                Background="#FF10"
-                />
-                <Border
-                MinHeight="100"
-                MinWidth="100"
-                Margin="5"
-                BorderThickness="5"
-                BorderBrush="#00F"
-                Background="#99F"
-                />
-                <Border
-                MinHeight="100"
-                MinWidth="100"
-                Margin="5"
-                BorderThickness="5"
-                BorderBrush="#FF77"
-                Background="#FF10"
-                />
-                <Border
-                MinHeight="100"
-                MinWidth="100"
-                Margin="5"
-                BorderThickness="5"
-                BorderBrush="#00F"
-                Background="#99F"
-                />
-            </StackPanel>
-        </ScrollViewer>
+        <Border Background="LightGray" Grid.ColumnSpan="4" Margin="0,0,0,0" Grid.Row="4" Grid.RowSpan="4"/>
+
     </Grid>
 </Window>

@@ -24,5 +24,33 @@ namespace Aplikacje.NET
         {
            
         }
+
+        private void redButton_Click(object sender, RoutedEventArgs e)
+        {
+            box1.Background = Brushes.Red;
+            box2.Background = Brushes.Red;
+            box3.Background = Brushes.Red;
+        }
+
+        private void blueButton_Click(object sender, RoutedEventArgs e)
+        {
+            box1.Background = Brushes.Blue;
+            box2.Background = Brushes.Blue;
+            box3.Background = Brushes.Blue;
+        }
+
+        private void greenButton_Click(object sender, RoutedEventArgs e)
+        {
+            box1.Background = Brushes.Green;
+            box2.Background = Brushes.Green;
+            box3.Background = Brushes.Green;
+        }
+
+        private void yellowButton_Click(object sender, RoutedEventArgs e)
+        {
+            box1.Background = Brushes.Yellow;
+            box2.Background = Brushes.Yellow;
+            box3.Background = Brushes.Yellow;
+        }
     }
 }
