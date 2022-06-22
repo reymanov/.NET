@@ -74,8 +74,13 @@ namespace Aplikacje.NET
 
         internal void DziałanieZwykłe(string znak)
         {
-            if (flagaDziałania == true)
-                ;
+            if (BuforDziałania != znak)
+            {
+                 BuforDziałania = znak;
+                 LiczbaA = double.Parse(buforIO);
+                 LiczbaB = default;
+                 Zeruj();
+            }
             else if (BuforDziałania == null)
             {
                 BuforDziałania = znak;
@@ -101,9 +106,10 @@ namespace Aplikacje.NET
 
         internal void DziałanieJednoargumentowe(string działanie)
         {
-            BuforDziałania = działanie;
-            flagaDziałania = true;
-            IO = WykonajDziałanie().ToString();
+                BuforDziałania = działanie;
+                liczbaA = double.Parse(IO);
+                IO = WykonajDziałanie().ToString();
+                Czyść();
         }
 
         internal void PodajWynik()
@@ -121,8 +127,18 @@ namespace Aplikacje.NET
         {
             if (BuforDziałania == "+")
                 return LiczbaA + LiczbaB;
+            else if (BuforDziałania == "-")
+                return LiczbaA - LiczbaB;
+            else if (BuforDziałania == "*")
+                return LiczbaA * LiczbaB;
+            else if (BuforDziałania== "/")
+                return LiczbaA / LiczbaB;
             else if (BuforDziałania == "x²")
                 return LiczbaA * LiczbaA;
+            else if (BuforDziałania == "√")
+                return Math.Sqrt(LiczbaA);
+            else if (BuforDziałania == "1/x")
+                return 1 / LiczbaA;
             else
                 return 0;
         }
@@ -139,6 +155,14 @@ namespace Aplikacje.NET
             flagaUłamka = false;
             flagaDziałania = false;
             IO = "0";
+        }
+        internal void Czyść()
+        {
+            BuforDziałania = default;
+            LiczbaA = default;
+            LiczbaB = default;
+            flagaUłamka = false;
+            flagaDziałania = false;
         }
         internal void Cofnij()
         {
