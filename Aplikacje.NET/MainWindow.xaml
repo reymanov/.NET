@@ -5,28 +5,166 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aplikacje.NET"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Window.Resources>
-        <local:Person x:Key="person"/>
-    </Window.Resources>
+        Title="Nasze okno"
+        Height="650"
+        Width="400"
+        FontSize="24">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="40"/>
+			<RowDefinition Height="50"/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
+		<TextBlock
+            Grid.ColumnSpan="4"
+            Style="{DynamicResource Bufory}"
+            Text="{Binding Bufory}"
+            />
+		<TextBlock
+            Grid.ColumnSpan="4"
+            Grid.Row="1"
+            Style="{DynamicResource IO}"
+            Text="{Binding IO}"
+            />
 
-        <StackPanel DataContext="{Binding Source={StaticResource person} ,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
-            <TextBlock>Wpisz imię i nazwisko</TextBlock>
-            <TextBox Text="{Binding Name, Mode=TwoWay}" x:Name="txt" />
-            <Label Content="{Binding FirstName, Mode=TwoWay}"/>
-            <Label Content="{Binding LastName,Mode=TwoWay}"/>
+		<Button
+            Grid.Row="2"
+            Grid.Column="0" Click="DziałanieProcentowe"
+            >%</Button>
+		<Button
+            Style="{StaticResource Ważny}"
+            Grid.Row="2"
+            Grid.Column="1" Click="Zeruj"
+            >CE</Button>
+		<Button
+            Style="{StaticResource Ważny}"
+            Grid.Row="2"
+            Grid.Column="2" Click="Resetuj"
+            >C</Button>
+		<Button
+            Style="{StaticResource Ważny}"
+            Grid.Row="2"
+            Grid.Column="3" Click="Cofnij"
+            >🠔</Button>
 
-            <TextBlock>Wpisz datę urodzenia w formacie Dzień.Miesiąc.Rok</TextBlock>
-            <TextBox Text="{Binding Date, Mode=TwoWay}"/>
-            <Label Content="{Binding Years, Mode=TwoWay}"/>
-        </StackPanel>
-    </Grid>
+		<Button
+            Grid.Row="3"
+            Grid.Column="0"
+            >1/x</Button>
+		<Button
+            Grid.Row="3"
+            Grid.Column="1" Click="DziałanieJednoargumentowe"
+            >x²</Button>
+		<Button
+            Grid.Row="3"
+            Grid.Column="2"
+            >√</Button>
+		<Button
+            Grid.Row="3"
+            Grid.Column="3"
+            >/</Button>
+
+		<Button
+            Style="{StaticResource Cyfra}"
+            Grid.Row="4"
+            Grid.Column="0"
+            Click="Cyfra"
+            >7</Button>
+		<Button
+            Style="{StaticResource Cyfra}"
+            Grid.Row="4"
+            Grid.Column="1"
+            Click="Cyfra"
+            >8</Button>
+		<Button
+            Style="{StaticResource Cyfra}"
+            Grid.Row="4"
+            Grid.Column="2"
+            Click="Cyfra"
+            >9</Button>
+		<Button
+            Grid.Row="4"
+            Grid.Column="3"
+            >*</Button>
+
+		<Button
+            Style="{StaticResource Cyfra}"
+            Grid.Row="5"
+            Grid.Column="0"
+            Click="Cyfra"
+            >4</Button>
+		<Button
+            Style="{StaticResource Cyfra}"
+            Grid.Row="5"
+            Grid.Column="1"
+            Click="Cyfra"
+            >5</Button>
+		<Button
+            Style="{StaticResource Cyfra}"
+            Grid.Row="5"
+            Grid.Column="2"
+            Click="Cyfra"
+            >6</Button>
+		<Button
+            Grid.Row="5"
+            Grid.Column="3"
+            >-</Button>
+
+		<Button
+            Style="{StaticResource Cyfra}"
+            Grid.Row="6"
+            Grid.Column="0"
+            Click="Cyfra"
+            >1</Button>
+		<Button
+            Style="{StaticResource Cyfra}"
+            Grid.Row="6"
+            Grid.Column="1"
+            Click="Cyfra"
+            >2</Button>
+		<Button
+            Style="{StaticResource Cyfra}"
+            Grid.Row="6"
+            Grid.Column="2"
+            Click="Cyfra"
+            >3</Button>
+		<Button
+            Grid.Row="6"
+            Grid.Column="3" Click="DziałanieZwykłe"
+            >+</Button>
+
+		<Button
+            Style="{StaticResource Cyfra}"
+            Grid.Row="7"
+            Grid.Column="0" Click="ZmianaZnaku"
+            >+/-</Button>
+		<Button
+            Style="{StaticResource Cyfra}"
+            Grid.Row="7"
+            Grid.Column="1"
+            Click="Cyfra"
+            >0</Button>
+		<Button
+            Style="{StaticResource Cyfra}"
+            Grid.Row="7"
+            Grid.Column="2" Click="Przecinek"
+            >,</Button>
+		<Button
+            Style="{StaticResource Ważny}"
+            Grid.Row="7"
+            Grid.Column="3" Click="PodajWynik"
+            >=</Button>
+	</Grid>
 </Window>
